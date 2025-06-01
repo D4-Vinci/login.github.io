@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getting things done: Programming | Log In</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for a clean look */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Ensure smooth transitions for theme changes */
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Dark mode specific styles */
+        .dark body {
+            background-color: #1a202c; /* Dark background */
+            color: #e2e8f0; /* Light text */
+        }
+
+        .dark header {
+            background-color: #2d3748; /* Darker header */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .dark h1 a, .dark .text-blue-700 {
+            color: #90cdf4; /* Lighter blue for title */
+        }
+
+        .dark nav a {
+            color: #a0aec0; /* Lighter gray for nav links */
+        }
+
+        .dark nav a:hover {
+            color: #63b3ed; /* Hover color for nav links */
+        }
+
+        .dark main {
+            background-color: #2d3748; /* Darker main content background */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        .dark h2, .dark h3 {
+            color: #e2e8f0; /* Light text for headings */
+        }
+
+        .dark p {
+            color: #cbd5e0; /* Lighter text for paragraphs */
+        }
+
+        .dark .text-gray-500 {
+            color: #a0aec0; /* Lighter gray for dates/authors */
+        }
+
+        .dark footer {
+            background-color: #1a202c; /* Darker footer */
+        }
+
+        .dark footer a {
+            color: #a0aec0; /* Lighter gray for footer links */
+        }
+
+        .dark footer a:hover {
+            color: #e2e8f0; /* Hover color for footer links */
+        }
+
+        /* Icon styling for smooth transitions */
+        #darkModeToggle {
+            position: relative; /* Needed for absolute positioning of icons */
+            overflow: hidden; /* Hide overflowing icon parts during transition */
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <header class="bg-white shadow-md py-4 px-6 md:px-10 lg:px-16 rounded-b-lg relative">
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <h1 class="text-3xl font-bold text-blue-700 mb-4 md:mb-0">
+                <a href="#" class="hover:text-blue-900 transition-colors duration-300">LOG IN</a>
+            </h1>
+            <nav>
+                <ul class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-6 text-lg">
+                    <li><a href="index.html" class="text-gray-700 hover:text-blue-700 transition-colors duration-300 px-3 py-1 rounded-md">Home</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-700 transition-colors duration-300 px-3 py-1 rounded-md">About</a></li>
+                    <li><a href="#" class="text-gray-700 hover:text-blue-700 transition-colors duration-300 px-3 py-1 rounded-md">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="darkModeToggle" class="absolute top-4 right-4 p-3 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-200">
+                <svg id="sunIcon" class="w-6 h-6 absolute inset-0 m-auto transition-all duration-500 ease-in-out" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="opacity: 1; transform: rotate(0deg);">
+                    <circle cx="12" cy="12" r="8"></circle>
+                    <line x1="12" y1="2" x2="12" y2="4" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                    <line x1="12" y1="20" x2="12" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                    <line x1="2" y1="12" x2="4" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                    <line x1="20" y1="12" x2="22" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                    <line x1="6.34" y1="6.34" x2="4.22" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                    <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                    <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                    <line x1="6.34" y1="17.66" x2="4.22" y2="19.78" stroke="currentColor" stroke-width="2" stroke-linecap="round"></line>
+                </svg>
+                <svg id="moonIcon" class="w-6 h-6 absolute inset-0 m-auto transition-all duration-500 ease-in-out" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="opacity: 0; transform: rotate(-90deg);">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="container mx-auto my-8 px-4 md:px-8 lg:px-16 bg-white p-8 rounded-lg shadow-md">
+        <article>
+            <h2 class="text-4xl font-extrabold text-gray-800 mb-4">Getting things done: Programming</h2>
+            <p class="text-lg text-gray-600 mb-6">
+                By <span class="font-semibold text-blue-700">Tino Tyson</span> on <span class="text-gray-500">June 1, 2025</span>
+            </p>
+
+            <img src="learn.jpg" alt="Learning to program" class="w-full h-auto rounded-lg mb-8 shadow-lg">
+
+            <p class="text-gray-700 leading-relaxed mb-6 text-lg">
+                Learning to program is a tedious task on its own. One has to learn to walk from sratch. Its like reinventing the wheel for some, whilst it may feel like using a passed over tool for others. 
+                Many see programming as an endless loop of tutorials, and most believe its all about the languages.<br><br>
+
+                Since there are a lot to select from and to put forward, most of the starters often tend to search up something like "Best programming language to get a high paying job in 2025", "What is the current trend in programming?",
+                 "Is coding necessary for a software engineer?"<br><br>
+
+                Many others align with the pessimistic side of things and belive that programming is not their cup of tea, or that the jobs in the software world is finished since the rise of AI.<br><br>
+
+                These fears and doubts are correct and necessary only up to a certain level.
+            </p>
+
+            <h3 class="text-3xl font-bold text-gray-800 mb-4">Why do we fall?</h3>
+            <p class="text-gray-700 leading-relaxed mb-6 text-lg">
+                It comes as no surprise that everyone should be learning atleast the basics of programming in today's world.<br><br>
+                Most people rather not want to learn. This can be due to various reasons such as lack of trust to this side of the economic world, talks on the lack of employment found in this field, 
+                procastination, fear of tutorial hell or even the fact that learning this skill is monetarily very expensive.<br><br>
+
+                <strong>So how do we learn to program?</strong><br><br>
+                The easiest and most humanly possible way to create it is by getting things done. You cannot become a painter just by painting a single image. You can't become a chef just by making one single dish.
+                Similarly in programming, you can't become an actual programmer, without doing some projects. You don't have to look or know what you are doing or how you are doing is what that matters. 
+                
+                <br><br>Did you make a mistake? Good! Write some more code.
+                <br>Did it not reach the level you were expecting? Good! Make it even better.
+                <br>Is the code you are writing, not working properly? Good! Try to rewrite the compiler and destroy the OS in the process.
+            </p>
+
+            <h3 class="text-3xl font-bold text-gray-800 mb-4">Project based learning 101</h3>
+            <p class="text-gray-700 leading-relaxed mb-4 text-lg">
+                Basic steps for projects:
+            </p>
+            <ul class="list-disc list-inside text-gray-870 leading-relaxed mb-6 pl-5 text-lg">
+                <li class="mb-2"><strong>Portfolio:</strong> An absolute must to your collection of projects. The first project, you would have to make is a portfolio, because it is the introduction, to you personal brand. 
+                A portfolio also allows others to see what you have made or done.</li>
+                <li class="mb-2"><strong>Web App:</strong> Try to make a functioning web app. Interesting on a small scale as a project, but powerful enough to run as a fully functioning business model, on its own. 
+                Many web apps often run as large scale SaaS.</li>
+                <li class="mb-2"><strong>Mobile App:</strong> Similar to Web App, but on smartphones. Can be both developed using tools, as well as from scratch.</li>
+                <li class="mb-2"><strong>Participating in a CTF:</strong> CTFs build a strong foundation in the field of cybersecurity and hacking. One can learn a lot from these events.</li>
+                <li class="mb-2"><strong>Trying things on the OS:</strong> Great way to find out how an Operating System works. Even better way to destroy it completely. Better done using a virtual machine like Virtualbox or VMware, 
+                for obvious reasons.</li>
+            </ul>
+
+            <h3 class="text-3xl font-bold text-gray-800 mb-4">Example: Development of a Portfolio</h3>
+            <p class="text-gray-700 leading-relaxed mb-6 text-lg">
+                The following steps need not be strictly followed:
+            </p>
+            <ul class="list-disc list-inside text-gray-870 leading-relaxed mb-6 pl-5 text-lg">
+                <li class="mb-2"><strong>HTML:</strong> For creating the basic structure of the website.</li>
+                <li class="mb-2"><strong>CSS:</strong>  To implement the necessary designs, that align with the occupation you do. If you mainly focus on fronte end, then you can make it more appealing to the human eye. 
+                    Else a simple, yet clean design would suffice the criteria.
+                </li>
+                <li class="mb-2"><strong>JavaScript:</strong> It is just as important to implement necessary functions, depending on how you wish your website should be. Go on! Implement a dark mode, a newsletter box, or any other feature. 
+                    It is necessary, especially if you work in similar fields to provide User Experience(UX).
+                </li>
+                <li class="mb-2"><strong>Others:</strong> Add multiple other features, in order to make a more interesting and useful website.</li>
+            </ul>
+
+            <h3 class="text-3xl font-bold text-gray-800 mb-4">Will this be enough?</h3>
+            <p class="text-gray-700 leading-relaxed mb-6 text-lg">
+                While it may be hard to begin and continue your journey, it is a hard truth you should face in order to achieve something. When I say a hard truth I don't mean that you should be doing projects to learn, 
+                but it is a bonus on your part. Doing projects would allow you to shine more in an interview or in the process of career selection. Also it would help in the creating a strong foundation of the basic and 
+                advanced topics.
+                <br>
+                If you personally ask me if this would be enough, then I don't know. No one knows how a person's life would turn out. The main thing I want you to take from this is that, you should trust the process. 
+                No matter how boring or hard it gets, you will see the results. But consistency is key; or not I don't know. Engineers, especially software engineers are supposed to be lazy enough to create solutions others are 
+                not thinking, whilst still being deligent enough to finish what they have started.
+            </p>
+
+            <h3 class="text-3xl font-bold text-gray-800 mb-4">Go Touch Grass!<h3>
+            <p class="text-gray-700 leading-relaxed mb-12 text-lg">
+                The most important thing to do as a software engineer is to go outside and touch grass. Always on the screen will get you nowhere. Priority no.1 is to exist in the real world. If you are unable to enjoy the 
+                real world, then none of this is worth anything. Most of us are in this for the money. If you can't even take a break and slow down for a some time, then all this is for nothing. Even in the future, you won't 
+                be able to enjoy the fruits of your labour. <br>
+                So always remember to take a break once in a while and go outside. Meet new people. Enjoy being a human. Enjoy nature. Have other hobbies other than this, because it is the real world is much more 
+                than a screen. You can learn a lot of things online, and try to implement them in real world problems, which you find outside the screen (or even online. You get the point right?)
+            </p> <hr>
+
+            <p class="text-gray-700 leading-relaxed mb-8 text-lg">
+                I don't think I would have to write down an entire conclusion here. Creating this blog in itself is hard, now I'm not gonna write down a conclusion. I hope that the reader must have understood 
+                what I'm trying to convey here.
+                <br>
+                Now go! Read another post or something.
+            </p>
+
+            <div class="mt-10 text-center">
+                <a href="index.html" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors duration-300 text-lg font-semibold">Back to Blog</a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6 px-4 md:px-8 lg:px-16 mt-8 rounded-t-lg">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2025 Log In. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const sunIcon = document.getElementById('sunIcon');
+            const moonIcon = document.getElementById('moonIcon');
+            const htmlElement = document.documentElement; // This is the <html> tag
+
+            // Function to set the theme
+            const setTheme = (isDark) => {
+                if (isDark) {
+                    htmlElement.classList.add('dark');
+                    localStorage.setItem('theme', 'dark');
+                    sunIcon.style.opacity = '0';
+                    sunIcon.style.transform = 'rotate(-90deg)';
+                    moonIcon.style.opacity = '1';
+                    moonIcon.style.transform = 'rotate(0deg)';
+                } else {
+                    htmlElement.classList.remove('dark');
+                    localStorage.setItem('theme', 'light');
+                    sunIcon.style.opacity = '1';
+                    sunIcon.style.transform = 'rotate(0deg)';
+                    moonIcon.style.opacity = '0';
+                    moonIcon.style.transform = 'rotate(90deg)'; /* Rotate moon out */
+                }
+            };
+
+            // Check for saved theme preference or system preference on load
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                setTheme(savedTheme === 'dark');
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                // If no saved theme, check system preference
+                setTheme(true);
+            } else {
+                // Default to light if no preference found
+                setTheme(false);
+            }
+
+            // Toggle theme on button click
+            darkModeToggle.addEventListener('click', () => {
+                const isCurrentlyDark = htmlElement.classList.contains('dark');
+                setTheme(!isCurrentlyDark);
+            });
+        });
+    </script>
+</body>
+</html>
